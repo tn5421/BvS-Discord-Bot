@@ -8,7 +8,7 @@ from discord.ext import commands
 
 settings = json.loads(open('settings.json').read())
 token = settings['token']
-version = [settings['version']
+version = settings['version']
 # this comment only here because the interpreter is actually toxic awful garbage cancer
 description = """Billy vs Snakeman InfoBot by tn5421"""
 prefix = "!"
