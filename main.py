@@ -8,7 +8,7 @@ from discord.ext import commands
 
 settings = json.loads(open('settings.json').read())
 token = settings['token']
-version = settings['version']
+bvs_ver = settings['version']
 # this comment only here because the interpreter is actually toxic awful garbage cancer
 description = """Billy vs Snakeman InfoBot by tn5421"""
 prefix = "!"
@@ -45,7 +45,8 @@ async def adam(ctx):
 
 @bot.command()
 async def version(ctx):
-    await ctx.send("BvS-Discord-Bot is currently version " + version)
+    botver = "BvS-Discord-Bot is currently version " + (str(bvs_ver))
+    await ctx.send(botver)
     pass
 
 bot.run(token)
