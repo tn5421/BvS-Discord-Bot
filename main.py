@@ -49,4 +49,20 @@ async def version(ctx):
     await ctx.send(botver)
     pass
 
+def yadg(string):
+    ENDPOINT = 'https://yadg.cc/api/v2/query/'
+    headers = {'Content-Type': 'application/json'}
+    payload = {'input': string, }
+    response = requests.post(url=f'{ENDPOINT}', json=payload)
+    yadg_step1 = json.loads(response.text)
+    print(yadg_step1)
+    resp1 = yadg_step1['url']
+    time.sleep(1)
+    response = requests.get(resp1)
+    yadg_step2 = json.loads(response.text)
+
+@bot.command()
+async def search_music(ctx):
+	await ctx.send(str(yadg_step2))
+
 bot.run(token)
