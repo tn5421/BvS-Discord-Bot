@@ -17,9 +17,8 @@ bot = commands.Bot(command_prefix=prefix, description=description)
 wk_list = ["Craftworld at War", "AspenStory", "ADAM", "FarmVale", "ForeverQuest"]
 
 def distance(list1, list2):
-    i = (list1 - list2) % 5
     j = (list2 - list1) % 5
-    return min(i, j)
+    return j
 
 def get_rday():
     return (int(time.strftime("%d")))
