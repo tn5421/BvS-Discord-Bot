@@ -5,15 +5,19 @@ A Discord bot built for the Billy vs SNAKEMAN community
 ## Dependencies
 
 An installation of Python 3.6.x with ssl compiled.
+
 The following packages: discord, asyncio, json
+
 Access to the Discord Developer portal.
 
 ## Usage
 
 ### Windows
+
 Run main.py as a program via double-click or through Python 3.6 IDLE
 
 ### *nix based systems
+
 Open your preferred terminal and run `python3 main.py`
 
 ## Contributing
